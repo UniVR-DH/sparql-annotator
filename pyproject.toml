@@ -1,13 +1,27 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "sparql-annotator"
 version = "0.2.6"
-description = "Annotate SPARQL queries extracting operator and structural features"
+description = "Annotate SPARQL queries extracting operator and structural features, and classify them by NL question type using an OWL ontology"
+readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.10,<4.0"
-authors = [{ name = "UniVR-DH" }]
+authors = [{ name = "UniVR-DH", email = "dh@univr.it" }]
+keywords = ["sparql", "nlp", "knowledge-graph", "annotation", "question-answering"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+]
 dependencies = [
     "rdflib>=6.0",
     "pyparsing>=3.0",
@@ -20,9 +34,15 @@ viz = ["graphviz>=0.20"]
 [project.scripts]
 sparql-annotator = "sparql_annotator.cli:cli"
 
+[project.urls]
+Homepage = "https://github.com/UniVR-DH/sparql-annotator"
+Repository = "https://github.com/UniVR-DH/sparql-annotator"
+Issues = "https://github.com/UniVR-DH/sparql-annotator/issues"
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["sparql_annotator*"]
+exclude = ["tests*"]
 
 [tool.uv]
 dev-dependencies = [
