@@ -9,7 +9,7 @@ description = "Annotate SPARQL queries extracting operator and structural featur
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10,<4.0"
-authors = [{ name = "UniVR-DH", email = "dh@univr.it" }]
+authors = [{ name = "Matteo Lissandrini", email = "matteo.lissandrini@univr.it" }]
 keywords = ["sparql", "nlp", "knowledge-graph", "annotation", "question-answering"]
 classifiers = [
     "Development Status :: 4 - Beta",
