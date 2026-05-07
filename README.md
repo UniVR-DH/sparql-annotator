@@ -18,11 +18,12 @@ uv sync --extra viz
 uv sync --dev
 ```
 
-All CLI examples below assume you are at the **repository root**.
+The CLI examples below use query and ontology files from the [nl2sparql-benchmark](https://github.com/UniVR-DH/nl2sparql-benchmark/) repository.
+Clone it alongside this repo, or replace the paths with your own files.
 
 ```bash
 # Shorthand used throughout this README
-SA="scripts/sparql-annotator/.venv/bin/python -m sparql_annotator.cli"
+SA="python -m sparql_annotator.cli"
 ```
 
 ---
